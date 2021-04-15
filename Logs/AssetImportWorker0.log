@@ -210,3 +210,250 @@ System memory in use after: 83.5 MB.
 Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 1959.
 Total: 2.881600 ms (FindLiveObjects: 0.343300 ms CreateObjectMapping: 0.219700 ms MarkObjects: 2.288600 ms  DeleteObjects: 0.028400 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003255 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.721 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1510 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 83.6 MB.
+System memory in use after: 83.7 MB.
+
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 1961.
+Total: 2.121100 ms (FindLiveObjects: 0.215700 ms CreateObjectMapping: 0.083000 ms MarkObjects: 1.777800 ms  DeleteObjects: 0.043400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003749 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.675 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1510 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 83.6 MB.
+System memory in use after: 83.7 MB.
+
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 1963.
+Total: 2.188400 ms (FindLiveObjects: 0.361100 ms CreateObjectMapping: 0.170500 ms MarkObjects: 1.629100 ms  DeleteObjects: 0.025800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 23099.136999 seconds.
+  path: Assets/PreFabs/Materials/Ch24_1001_Diffuse.mat
+  artifactKey: Guid(e4b97c3172c3e6842b3a5b0bfd818f53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PreFabs/Materials/Ch24_1001_Diffuse.mat using Guid(e4b97c3172c3e6842b3a5b0bfd818f53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f93001457cc8272b7632dfb0ef9df182') in 0.153158 seconds
+  Import took 0.156669 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 430.336615 seconds.
+  path: Assets/Scripts/HingeJoint.cs
+  artifactKey: Guid(dc0ddf918cbd5224e8ae4f4fce5719c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/HingeJoint.cs using Guid(dc0ddf918cbd5224e8ae4f4fce5719c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '836c3fc3074f4e1f9e9c6d2a20296504') in 0.005908 seconds
+  Import took 0.009425 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003273 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.643 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1511 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.1 MB.
+System memory in use after: 84.2 MB.
+
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 2000.
+Total: 1.530700 ms (FindLiveObjects: 0.157200 ms CreateObjectMapping: 0.042900 ms MarkObjects: 1.313700 ms  DeleteObjects: 0.016200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003340 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.606 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1511 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.3 MB.
+System memory in use after: 84.4 MB.
+
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 2002.
+Total: 1.472100 ms (FindLiveObjects: 0.175300 ms CreateObjectMapping: 0.049800 ms MarkObjects: 1.231700 ms  DeleteObjects: 0.014600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 707.427408 seconds.
+  path: Assets/Scripts/HingeJoint.cs
+  artifactKey: Guid(dc0ddf918cbd5224e8ae4f4fce5719c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/HingeJoint.cs using Guid(dc0ddf918cbd5224e8ae4f4fce5719c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09b0ace8fe194fbe0ae5013ea4fcf58f') in 0.003692 seconds
+  Import took 0.006383 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 306.046982 seconds.
+  path: Assets/PreFabs/StairCase.prefab
+  artifactKey: Guid(57b415e6c41281047abb461f934b94f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PreFabs/StairCase.prefab using Guid(57b415e6c41281047abb461f934b94f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a3bc4e9646ca4a36a206b76dacee1d9') in 0.049811 seconds
+  Import took 0.052305 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 235.172038 seconds.
+  path: Assets/Scripts/HingeJoint.cs
+  artifactKey: Guid(dc0ddf918cbd5224e8ae4f4fce5719c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/HingeJoint.cs using Guid(dc0ddf918cbd5224e8ae4f4fce5719c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec389f93b9b28afe68a52e6ecf56c6ec') in 0.003012 seconds
+  Import took 0.007604 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 194.936622 seconds.
+  path: Assets/Scripts/HingeJoint.cs
+  artifactKey: Guid(dc0ddf918cbd5224e8ae4f4fce5719c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/HingeJoint.cs using Guid(dc0ddf918cbd5224e8ae4f4fce5719c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '495a68c7b2b50d8a63de601bd537e90f') in 0.001588 seconds
+  Import took 0.004341 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003152 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.622 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1511 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.4 MB.
+System memory in use after: 84.5 MB.
+
+Unloading 29 unused Assets to reduce memory usage. Loaded Objects now: 2006.
+Total: 1.637500 ms (FindLiveObjects: 0.206400 ms CreateObjectMapping: 0.068700 ms MarkObjects: 1.342300 ms  DeleteObjects: 0.019300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.017369 seconds.
+  path: Assets/Scripts/HingeJoint.cs
+  artifactKey: Guid(dc0ddf918cbd5224e8ae4f4fce5719c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/HingeJoint.cs using Guid(dc0ddf918cbd5224e8ae4f4fce5719c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8b9d3928ae3ff13145b6f21e46405a6') in 0.004245 seconds
+  Import took 0.007106 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.604442 seconds.
+  path: Assets/Scripts/HingePlatform.cs
+  artifactKey: Guid(dc0ddf918cbd5224e8ae4f4fce5719c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/HingePlatform.cs using Guid(dc0ddf918cbd5224e8ae4f4fce5719c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1634fb3f42cc1c889eba9dd3e4f11af') in 0.001910 seconds
+  Import took 0.004549 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003088 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.636 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1511 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.6 MB.
+System memory in use after: 84.7 MB.
+
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 2008.
+Total: 1.522700 ms (FindLiveObjects: 0.196300 ms CreateObjectMapping: 0.057500 ms MarkObjects: 1.250800 ms  DeleteObjects: 0.017100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003309 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.635 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1511 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.8 MB.
+System memory in use after: 84.9 MB.
+
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 2010.
+Total: 1.778800 ms (FindLiveObjects: 0.210200 ms CreateObjectMapping: 0.053000 ms MarkObjects: 1.496200 ms  DeleteObjects: 0.018200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 40.714097 seconds.
+  path: Assets/Scripts/HingePlatform.cs
+  artifactKey: Guid(dc0ddf918cbd5224e8ae4f4fce5719c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/HingePlatform.cs using Guid(dc0ddf918cbd5224e8ae4f4fce5719c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56fb8c4c37278629d9ef8845f84ea228') in 0.003917 seconds
+  Import took 0.006512 seconds .
+
