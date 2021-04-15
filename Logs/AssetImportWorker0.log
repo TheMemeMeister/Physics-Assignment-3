@@ -457,3 +457,29 @@ Received Import Request.
 Start importing Assets/Scripts/HingePlatform.cs using Guid(dc0ddf918cbd5224e8ae4f4fce5719c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56fb8c4c37278629d9ef8845f84ea228') in 0.003917 seconds
   Import took 0.006512 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003223 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.657 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1511 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.9 MB.
+System memory in use after: 85.0 MB.
+
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 2012.
+Total: 1.580100 ms (FindLiveObjects: 0.212100 ms CreateObjectMapping: 0.053800 ms MarkObjects: 1.292800 ms  DeleteObjects: 0.019300 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
