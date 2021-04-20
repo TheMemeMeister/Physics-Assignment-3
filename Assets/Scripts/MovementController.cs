@@ -8,7 +8,7 @@ public class MovementController : MonoBehaviour
     public CharacterController controller;
     public Transform cam;
     public float speed = 5;
-
+    public float gravity = 9.81f;
     private Rigidbody ninjaRB;
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
@@ -19,6 +19,7 @@ public class MovementController : MonoBehaviour
     {
         ninjaRB = GetComponent<Rigidbody>();
         col = GetComponent<CapsuleCollider>();
+        controller = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
@@ -33,17 +34,21 @@ public class MovementController : MonoBehaviour
         if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
         {
             ninjaRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            //direction.y = jumpForce;
+            //controller.Move(direction.normalized * speed * Time.deltaTime);
         }
-        if (lateraldirection.magnitude >= 0.1)
+        if (lateraldirection.magnitude >= 0.1 && IsGrounded())
         {
             //in unity we move on x and z axis
-            float TargetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+            float TargetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y + direction.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, TargetAngle, ref turnSmoothVelocity, turnSmoothTime);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
             Vector3 movDir = Quaternion.Euler(0f, TargetAngle, 0) * Vector3.forward;
             controller.Move(movDir.normalized * speed * Time.deltaTime);
+            //ninjaRB.AddForce(movDir.normalized * speed, ForceMode.Impulse);
         }
+        //direction.y -= gravity * Time.deltaTime;
     }
     private bool IsGrounded()
     {
