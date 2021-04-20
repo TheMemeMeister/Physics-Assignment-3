@@ -28,7 +28,7 @@ public class HingePlatform : MonoBehaviour
         //Can do something else in here, maybe launch the player? 
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
         JointSpring spring = new JointSpring();
         spring.spring = hitForce;
@@ -38,7 +38,7 @@ public class HingePlatform : MonoBehaviour
             Debug.Log("Activated Hinge Trap");
             spring.targetPosition = pressedPosition;
         }
-        //Hj.spring = spring;
-        //Hj.useLimits = true;  //might want to clamp this instead
+        Hj.spring = spring;
+        Hj.useLimits = true;  //might want to clamp this instead
     }
 }

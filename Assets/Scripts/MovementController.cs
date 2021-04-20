@@ -9,10 +9,13 @@ public class MovementController : MonoBehaviour
     public Transform cam;
     public float speed = 6;
 
+    private Rigidbody ninjaRB;
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
+    [SerializeField] public float jumpForce = 10f;
     void Start()
     {
+        ninjaRB = GetComponent<Rigidbody>();
 
     }
 
@@ -21,9 +24,13 @@ public class MovementController : MonoBehaviour
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
-
-        if (direction.magnitude >= 0.1)
+        Vector3 direction = new Vector3(horizontal, ninjaRB.velocity.y, vertical).normalized;
+        Vector3 lateraldirection = new Vector3(horizontal, 0.0f, vertical).normalized;
+        if (Input.GetKeyDown("space"))
+        {
+            ninjaRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
+        if (lateraldirection.magnitude >= 0.1)
         {
             //in unity we move on x and z axis
             float TargetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;

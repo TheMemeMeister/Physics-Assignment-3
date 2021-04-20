@@ -19,7 +19,7 @@ public class SpikeTrap : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             Debug.Log("Hit Spikes");
             player.transform.position = spawnPoint.transform.position;

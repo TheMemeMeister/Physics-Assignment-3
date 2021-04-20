@@ -23,28 +23,28 @@ public class AnimationStateController : MonoBehaviour
 
         if (forwardPressed || leftPressed || rightPressed || backPressed)
         {
-            animator.SetBool("isWalking", true);
+            animator.SetBool("IsWalking", true);
         }
         if (runPressed && forwardPressed || runPressed && leftPressed || runPressed && rightPressed || runPressed && backPressed)
         {
-            animator.SetBool("isRunning", true);
+            animator.SetBool("IsRunning", true);
         }
         if (jumpPressed && forwardPressed || jumpPressed && leftPressed || jumpPressed && rightPressed || jumpPressed && backPressed)
         {
-            animator.SetBool("isJumping", true);
+            animator.SetBool("IsJumping", true);
         }
         if (!runPressed)
         {
-            animator.SetBool("isRunning", false);
+            animator.SetBool("IsRunning", false);
         }
         if (!jumpPressed)
         {
-            animator.SetBool("isJumping", false);
+            animator.SetBool("IsJumping", false);
         }
         if (!forwardPressed && !leftPressed && !rightPressed && !backPressed)
         {
-            animator.SetBool("isWalking", false);
-            animator.SetBool("isRunning", false);
+            animator.SetBool("IsWalking", false);
+            animator.SetBool("IsRunning", false);
         }
     }
 }
