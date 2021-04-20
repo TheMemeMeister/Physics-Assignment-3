@@ -7,16 +7,18 @@ public class MovementController : MonoBehaviour
 
     public CharacterController controller;
     public Transform cam;
-    public float speed = 6;
+    public float speed = 5;
 
     private Rigidbody ninjaRB;
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
-    [SerializeField] public float jumpForce = 10f;
+    public float jumpForce = 10f;
+    public LayerMask groundLayers;
+    public CapsuleCollider col;
     void Start()
     {
         ninjaRB = GetComponent<Rigidbody>();
-
+        col = GetComponent<CapsuleCollider>();
     }
 
     // Update is called once per frame
@@ -26,7 +28,9 @@ public class MovementController : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, ninjaRB.velocity.y, vertical).normalized;
         Vector3 lateraldirection = new Vector3(horizontal, 0.0f, vertical).normalized;
-        if (Input.GetKeyDown("space"))
+        //Vector3 movement = new Vector3(horizontal, 0, vertical);
+        //ninjaRB.AddForce(movement * speed);
+        if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
         {
             ninjaRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
@@ -40,5 +44,9 @@ public class MovementController : MonoBehaviour
             Vector3 movDir = Quaternion.Euler(0f, TargetAngle, 0) * Vector3.forward;
             controller.Move(movDir.normalized * speed * Time.deltaTime);
         }
+    }
+    private bool IsGrounded()
+    {
+        return Physics.CheckCapsule(col.bounds.center, new Vector3(col.bounds.center.x, col.bounds.min.y, col.bounds.center.z), col.radius * .9f, groundLayers);
     }
 }
