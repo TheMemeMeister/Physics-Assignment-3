@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpeedUp : MonoBehaviour
+public class SpeedDown : MonoBehaviour
 {
     public Rigidbody ninjabody;
     Vector3 oldVel;
-    public float speedDown = 2f;
+    public float speedDown = 100f;
     void Start()
     {
         ninjabody = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>();
@@ -21,10 +21,11 @@ public class SpeedUp : MonoBehaviour
 
     void OnTriggerEnter(Collider other) 
     {
-        Debug.Log("Collision with Speed Trap");
+        Debug.Log("Collision with Pointy Boi");
         if (other.gameObject.CompareTag("Player"))
         {
-            ninjabody.velocity /= speedDown;
+
+            ninjabody.velocity *= speedDown;
 
 
         }
