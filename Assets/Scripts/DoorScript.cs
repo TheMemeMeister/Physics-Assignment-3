@@ -12,7 +12,7 @@ public class DoorScript : MonoBehaviour
         Doorcan.SetActive(false);
         KeysRequired = 2;
     }
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerStay(Collider other)
     {
       
        
@@ -22,9 +22,14 @@ public class DoorScript : MonoBehaviour
             Doorcan.SetActive(true);
             if(pInfo.KeysCollected == KeysRequired)
             {
-                pInfo.KeysCollected = 0; //taking keys away from the player
-                //open the door, update the key num
+                if (Input.GetKeyDown(KeyCode.E)) //refactor this if it works
+                    {
+                    Debug.Log("E pressed");
+                    pInfo.KeysCollected = 0; //taking keys away from the player
+                }
+               
             }
+            
         }
       
     }
