@@ -52,15 +52,15 @@ public class PlayerMovement : MonoBehaviour
         {
             
 
-            if (moveDirection != Vector3.zero && !Input.GetKey(KeyCode.LeftShift))
+            if (direction != Vector3.zero && !Input.GetKey(KeyCode.LeftShift))
             {
                 Walk();
             }
-            else if (moveDirection != Vector3.zero && Input.GetKey(KeyCode.LeftShift))
+            else if (direction != Vector3.zero && Input.GetKey(KeyCode.LeftShift))
             {
                 Run();
             }
-            else if (moveDirection == Vector3.zero)
+            else if (direction == Vector3.zero)
             {
                 Idle();
             }
@@ -89,6 +89,8 @@ public class PlayerMovement : MonoBehaviour
     {
       
         anim.SetFloat("Speed", 0, 0.1f, Time.deltaTime);
+        moveSpeed = 0;//reset movespeed to stop sliding
+
     }
     private void Walk()
     {
@@ -109,5 +111,18 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("IsJumping", true);
     }
 
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        switch (hit.gameObject.tag)
+        {
+            case "SpeedBoost":
+                moveSpeed = 25f;
+                break;
+            case "SpeedDown":
+                moveSpeed = 2;
+                break;
+        }
+    }
     
+
 }
