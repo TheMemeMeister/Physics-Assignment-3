@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private float walkSpeed;
     [SerializeField] private float runSpeed;
-    [SerializeField] private float SpeedModifier;
+    [SerializeField] private float SpeedModifier = 1;
    // [SerializeField] public static int KeysCollected = 0;
     public TextMeshProUGUI keyText;
     private Vector3 moveDirection;
@@ -125,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        switch (hit.gameObject.tag)
+        switch (hit.gameObject.tag) //Good code for later
         {
             case "SpeedBoost":
                 SpeedModifier = 25f;
