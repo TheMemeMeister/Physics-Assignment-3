@@ -1,7 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
+public static class pInfo // Player Info, accessible anywhere. Makes things a lot easier without the need of instancing.
+{
+    [SerializeField] public static int KeysCollected = 0;
+}
 public class PlayerMovement : MonoBehaviour
 {
     //Variables
@@ -9,13 +15,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float walkSpeed;
     [SerializeField] private float runSpeed;
     [SerializeField] private float SpeedModifier;
+   // [SerializeField] public static int KeysCollected = 0;
+    public TextMeshProUGUI keyText;
     private Vector3 moveDirection;
     private Vector3 velocity; //keep track of gravity and jumping
     [SerializeField] private bool isGrounded;
     [SerializeField] private float groundCheckDistance;
     [SerializeField] private LayerMask groundMask;
     [SerializeField] private float gravity;
-
+    
     [SerializeField] private float jumpHeight;
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
@@ -27,12 +35,15 @@ public class PlayerMovement : MonoBehaviour
     {
         cont = GetComponent<CharacterController>();
         anim = GetComponentInChildren<Animator>();
+        pInfo.KeysCollected = 0;
     }
+    
 
     // Update is called once per frame
     private void Update()
     {
         Move();
+        keyText.text = "Keys Collected: " + pInfo.KeysCollected.ToString();
     }
     private void Move()
     {
