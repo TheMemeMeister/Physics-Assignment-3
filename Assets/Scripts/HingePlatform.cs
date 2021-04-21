@@ -22,13 +22,8 @@ public class HingePlatform : MonoBehaviour
         //Hj.useSpring = true;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //Can do something else in here, maybe launch the player? 
-    }
 
-    private void OnCollisionEnter(Collision other)
+     void OnTriggerEnter(Collider other)
     {
         JointSpring spring = new JointSpring();
         spring.spring = hitForce;
