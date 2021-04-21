@@ -8,6 +8,7 @@ TagManager:
   - SpeedUp
   - SpeedDown
   - Key
+  - JumpPad
   layers:
   - Default
   - TransparentFX

@@ -2724,9 +2724,9 @@ GameObject:
   - component: {fileID: 717263664}
   - component: {fileID: 717263663}
   - component: {fileID: 717263662}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BounceZone
-  m_TagString: SpeedUp
+  m_TagString: JumpPad
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2802,7 +2802,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 717263660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 72.25, y: 45.87, z: 4.8}
+  m_LocalPosition: {x: 36.7, y: 19.9, z: 40.4}
   m_LocalScale: {x: 6.0762806, y: 1, z: 4.449862}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7488,7 +7488,7 @@ GameObject:
   - component: {fileID: 1914546248}
   m_Layer: 6
   m_Name: Slow Zone
-  m_TagString: Untagged
+  m_TagString: SpeedDown
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -135,6 +135,10 @@ public class PlayerMovement : MonoBehaviour
                 break;
             case "Ground":
                 SpeedModifier = 1;
+                jumpHeight = 15;
+                break;
+            case "JumpPad":
+                jumpHeight = 30;
                 break;
         }
     }
