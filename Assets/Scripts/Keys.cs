@@ -4,19 +4,25 @@ using UnityEngine;
 
 public class Keys : MonoBehaviour
 {
-
-    private void OnCollisionEnter(Collision other)
+  
+     private void OnTriggerEnter(Collider other)
     {
 
 
         if (other.gameObject.CompareTag("Player"))
         {
-            pInfo.KeysCollected++;
-            Debug.Log("collected key");
-            Destroy(gameObject);
+           
+            DestroyKey();
         }
 
     }
-   
+    void DestroyKey()
+    {
+
+
+        pInfo.KeysCollected++;
+        Debug.Log("collected key");
+        Destroy(gameObject);
+    }
 }
 
