@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private float walkSpeed;
     [SerializeField] private float runSpeed;
-
+    [SerializeField] private float SpeedModifier;
     private Vector3 moveDirection;
     private Vector3 velocity; //keep track of gravity and jumping
     [SerializeField] private bool isGrounded;
@@ -89,20 +89,21 @@ public class PlayerMovement : MonoBehaviour
     {
       
         anim.SetFloat("Speed", 0, 0.1f, Time.deltaTime);
-        moveSpeed = 0;//reset movespeed to stop sliding
+        moveSpeed = 0 * SpeedModifier;//reset movespeed to stop sliding
+
 
     }
     private void Walk()
     {
         Debug.Log("Walk");
         anim.SetFloat("Speed", 0.5f, 0.1f, Time.deltaTime);
-        moveSpeed = walkSpeed;
+        moveSpeed = walkSpeed * SpeedModifier;
     }
     private void Run()
     {
         Debug.Log("Run");
         anim.SetFloat("Speed", 1, 0.1f, Time.deltaTime);
-        moveSpeed = runSpeed;
+        moveSpeed = runSpeed * SpeedModifier;
     }
 
     private void Jump()
@@ -116,10 +117,13 @@ public class PlayerMovement : MonoBehaviour
         switch (hit.gameObject.tag)
         {
             case "SpeedBoost":
-                moveSpeed = 25f;
+                SpeedModifier = 25f;
                 break;
             case "SpeedDown":
-                moveSpeed = 2;
+                SpeedModifier = 0.5f;
+                break;
+            case "Ground":
+                SpeedModifier = 1;
                 break;
         }
     }
