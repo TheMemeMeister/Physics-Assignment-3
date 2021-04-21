@@ -53,7 +53,7 @@ public class CameraFollow : MonoBehaviour
         transform.rotation = localRotation;
     }
 
-     void LateUpdate()
+     void FixedUpdate()
     {
         CameraUpdater();
 
