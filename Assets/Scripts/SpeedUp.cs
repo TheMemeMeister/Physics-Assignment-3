@@ -19,7 +19,7 @@ public class SpeedUp : MonoBehaviour
 
     }
 
-    void OnTriggerEnter(Collider other) 
+    void OnTriggerStay(Collider other) 
     {
         Debug.Log("Collision with Speed Trap");
         if (other.gameObject.CompareTag("Player"))

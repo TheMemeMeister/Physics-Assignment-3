@@ -19,7 +19,7 @@ public class SpeedDown : MonoBehaviour
 
     }
 
-    void OnTriggerEnter(Collider other) 
+    void OnTriggerStay(Collider other) 
     {
         Debug.Log("Collision with Pointy Boi");
         if (other.gameObject.CompareTag("Player"))
