@@ -7,6 +7,7 @@ using TMPro;
 public static class pInfo // Player Info, accessible anywhere. Makes things a lot easier without the need of instancing.
 {
     [SerializeField] public static int KeysCollected = 0;
+    [SerializeField] public static int Lives = 3;
 }
 public class PlayerMovement : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask SpeedDMask;
     [SerializeField] private float gravity;
     [SerializeField] private float jumpHeight;
-
+    [SerializeField] public TextMeshProUGUI livesText;
     //turning
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
@@ -41,9 +42,11 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController cont;
     private Animator anim;
     public Transform cam;
+    private Rigidbody ninjaRB;
     private void Start()
     {
         cont = GetComponent<CharacterController>();
+        ninjaRB = GetComponent<Rigidbody>();
         anim = GetComponentInChildren<Animator>();
         pInfo.KeysCollected = 0;
     }
@@ -53,7 +56,8 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         Move();
-        keyText.text = "Keys Collected: " + pInfo.KeysCollected.ToString();
+        keyText.text = "Keys: " + pInfo.KeysCollected.ToString();
+        livesText.text = "Lives: " + pInfo.Lives.ToString();
     }
     private void Move()
     {
@@ -69,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 direction = new Vector3(horizontal, 0, vertical).normalized;
         //moveDirection = transform.TransformDirection(moveDirection);
         Vector3 lateraldirection = new Vector3(horizontal, 0.0f, vertical).normalized;
+        //ninjaRB.velocity = new Vector3(horizontal, ninjaRB.velocity.y, vertical); If time, use this to recode player movement
         if (isGrounded) //no movement in air
         {
             

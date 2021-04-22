@@ -9,6 +9,7 @@ TagManager:
   - SpeedDown
   - Key
   - JumpPad
+  - Trap
   layers:
   - Default
   - TransparentFX
