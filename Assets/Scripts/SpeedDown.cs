@@ -6,7 +6,7 @@ public class SpeedDown : MonoBehaviour
 {
     public Rigidbody ninjabody;
     Vector3 oldVel;
-    public float speedDown = 100f;
+    public float speedDown = 2;
     void Start()
     {
         ninjabody = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>();
@@ -25,7 +25,7 @@ public class SpeedDown : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
 
-            ninjabody.velocity *= speedDown;
+            ninjabody.velocity /= speedDown;
 
 
         }

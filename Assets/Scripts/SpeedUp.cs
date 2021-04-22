@@ -6,7 +6,7 @@ public class SpeedUp : MonoBehaviour
 {
     public Rigidbody ninjabody;
     Vector3 oldVel;
-    public float speedDown = 2f;
+    public float speedUp = 100f;
     void Start()
     {
         ninjabody = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>();
@@ -24,7 +24,7 @@ public class SpeedUp : MonoBehaviour
         Debug.Log("Collision with Speed Trap");
         if (other.gameObject.CompareTag("Player"))
         {
-            ninjabody.velocity /= speedDown;
+            ninjabody.velocity *= speedUp;
 
 
         }
