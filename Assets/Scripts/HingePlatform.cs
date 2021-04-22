@@ -23,7 +23,7 @@ public class HingePlatform : MonoBehaviour
     }
 
 
-     void OnTriggerEnter(Collider other)
+     private void OnTriggerStay(Collider other)
     {
         JointSpring spring = new JointSpring();
         spring.spring = hitForce;

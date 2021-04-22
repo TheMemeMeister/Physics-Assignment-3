@@ -22,11 +22,21 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool isGrounded;
     [SerializeField] private float groundCheckDistance;
     [SerializeField] private LayerMask groundMask;
+    [SerializeField] private LayerMask JumpMask;
+    [SerializeField] private LayerMask SpeedUMask;
+    [SerializeField] private LayerMask SpeedDMask;
     [SerializeField] private float gravity;
-    
     [SerializeField] private float jumpHeight;
+
+    //turning
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
+
+    ////slopes
+    //public float heightpadding = 0.05f;
+    //public LayerMask ground;
+    //public float maxGroundAngle = 120;
+    //private float groundangle;
     //Referances
     private CharacterController cont;
     private Animator anim;
@@ -47,9 +57,9 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Move()
     {
-        isGrounded = Physics.CheckSphere(transform.position, groundCheckDistance, groundMask);
+        isGrounded = Physics.CheckSphere(transform.position, groundCheckDistance, groundMask); //This needs to be for differant layers, rn all interactables MUST be set to ground. not using second raycasts yet but still bad form
 
-       if(isGrounded && velocity.y < 0)
+       if(isGrounded && velocity.y < 0 ) //grounding the player if the slope is too steep
         {
             velocity.y = -2f; //grounded -> start applying gravity
             anim.SetBool("IsJumping", false);
@@ -135,10 +145,10 @@ public class PlayerMovement : MonoBehaviour
                 break;
             case "Ground":
                 SpeedModifier = 1;
-                jumpHeight = 15;
+                jumpHeight = 30;
                 break;
             case "JumpPad":
-                jumpHeight = 30;
+                jumpHeight = 15;
                 break;
         }
     }
