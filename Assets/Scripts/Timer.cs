@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     public TextMeshProUGUI timeText;
@@ -16,7 +16,9 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            timeValue = 0; 
+            timeValue = 0;
+            Debug.Log("you lose");
+            SceneManager.LoadScene("LoseScene");
         }
         DisplayTime(timeValue);
     }
