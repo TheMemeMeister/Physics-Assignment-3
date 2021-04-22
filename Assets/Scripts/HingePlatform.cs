@@ -11,29 +11,35 @@ public class HingePlatform : MonoBehaviour
     [SerializeField, Range(1, 1000), Tooltip("Friction on Hinge Plat")]
     public float flipperFriction = 150;
 
+    public float springConstant = 0;
     public float resetposition = 0f;
     public float pressedPosition = 45f; //Use gameobjects intead?
 
-    HingeJoint Hj;
+    HingeJoint Hj = null;
+    JointSpring JS;
+    
     // Start is called before the first frame update
     void Start()
     {
         Hj = GetComponent<HingeJoint>();
-        //Hj.useSpring = true;
+        Hj.useSpring = true;
+         JS = new JointSpring();
+        JS.spring = hitForce;
+        JS.damper = flipperFriction;
+        Hj.spring = JS;
     }
+    
 
-
-     private void OnTriggerStay(Collider other)
+      void OnCollisionEnter(Collision other)
     {
-        JointSpring spring = new JointSpring();
-        spring.spring = hitForce;
-        spring.damper = flipperFriction;
+        
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("Activated Hinge Trap");
-            spring.targetPosition = pressedPosition;
+            JS.targetPosition = pressedPosition;
+            Hj.spring = JS;
         }
-        Hj.spring = spring;
-        Hj.useLimits = true;  //might want to clamp this instead
+      
     }
 }
+
