@@ -42,8 +42,8 @@ public class CameraFollow : MonoBehaviour
         float inputZ = Input.GetAxis("RightStickVertical");
         mouseX = Input.GetAxis("Mouse X");
         mouseY = Input.GetAxis("Mouse Y");
-        finalInputX = inputX + mouseX;
-        finalInputZ = inputZ + mouseY;
+        //finalInputX = inputX + mouseX;
+        //finalInputZ = inputZ + mouseY;
 
         rotY += finalInputX * inputSensitivity * Time.deltaTime;
         rotX += finalInputZ * inputSensitivity * Time.deltaTime;
