@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
         }
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-        Vector3 direction = new Vector3(horizontal, 0, vertical).normalized;
+        Vector3 direction = new Vector3(horizontal, 0, vertical);
         //moveDirection = transform.TransformDirection(moveDirection);
         Vector3 lateraldirection = new Vector3(horizontal, 0.0f, vertical).normalized;
         if (isGrounded) //no movement in air
