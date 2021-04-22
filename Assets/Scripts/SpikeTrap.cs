@@ -12,7 +12,7 @@ public class SpikeTrap : MonoBehaviour
     void Start()
     {
        
-        nb = GetComponent<Rigidbody>();
+        nb  = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -33,7 +33,7 @@ public class SpikeTrap : MonoBehaviour
                 
                 if (pInfo.Lives == 0)
                 {
-                    SceneManager.LoadScene("Lose Scene");
+                    SceneManager.LoadScene("LoseScene");
                     Debug.Log("you lose");
                 }
             }

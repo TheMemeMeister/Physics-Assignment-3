@@ -15,7 +15,7 @@ public class Saw : MonoBehaviour
     void Start()
     {
         r = GetComponent<Rigidbody>();
-        nb = GetComponent<Rigidbody>();
+        nb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -31,18 +31,18 @@ public class Saw : MonoBehaviour
         r.AddTorque(Vector3.right);
        
     }
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             //resets position of the ball when ball falls out of the play area 
-            nb.velocity = Vector3.zero;
+            //nb.velocity = Vector3.zero;
             nb.transform.position = NinjaSpawn.transform.position;
             Debug.Log("Ninja fell out of bounds or hit trap");
             pInfo.Lives--;
             if (pInfo.Lives-- == 0)
             {
-                SceneManager.LoadScene("Lose Scene");
+                SceneManager.LoadScene("LoseScene");
                 Debug.Log("you lose");
             }
         }
