@@ -23,9 +23,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool isGrounded;
     [SerializeField] private float groundCheckDistance;
     [SerializeField] private LayerMask groundMask;
-    [SerializeField] private LayerMask JumpMask;
-    [SerializeField] private LayerMask SpeedUMask;
-    [SerializeField] private LayerMask SpeedDMask;
     [SerializeField] private float gravity;
     [SerializeField] private float jumpHeight;
     [SerializeField] public TextMeshProUGUI livesText;
