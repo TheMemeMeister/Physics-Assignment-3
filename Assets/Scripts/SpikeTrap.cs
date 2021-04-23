@@ -7,11 +7,11 @@ public class SpikeTrap : MonoBehaviour
     
     public GameObject spawnPoint;
     public Rigidbody nb; //ninja
+    public GameObject player;
    
     // Start is called before the first frame update
     void Start()
     {
-       
         nb  = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>();
     }
 
@@ -25,10 +25,13 @@ public class SpikeTrap : MonoBehaviour
        
             if (other.gameObject.CompareTag("Player"))
             {
-                //resets position of the ball when ball falls out of the play area 
-                nb.velocity = Vector3.zero;
-                nb.transform.position = spawnPoint.transform.position;
-                Debug.Log("Ninja fell out of bounds or hit trap");
+                //move player to spawn on collision
+            nb.velocity = Vector3.zero;
+            player = other.gameObject;
+            player.transform.position = spawnPoint.transform.position;
+          //  nb.transform.position = spawnPoint.transform.position;
+                Debug.Log("Ninja fell out of bounds or hit trapsadasdasdasd");
+            
             pInfo.Lives--;
                 
                 if (pInfo.Lives == 0)
